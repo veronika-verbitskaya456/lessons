@@ -1,0 +1,103 @@
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+}
+
+body{
+    background-color: #F8F8F8;
+}
+
+.container{
+    margin: 60px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.case{
+    background-color: #FFFFFF;
+    width: 360px;
+    height: 577px;
+}
+
+.price-container{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 5px;
+}
+
+#pro-price{
+    margin: 61px 144px 45px 144px;
+}
+
+#all-inclusive-price{
+    margin: 61px 153px 45px 153px;
+}
+
+
+
+#title-services{
+    width: 374px;
+    height: 56px;
+    margin: 128px auto 96px auto;
+    font-size: 48px;
+    color: #01353E;
+}
+
+.title-case{
+    font-size: 36px;
+    height: 44px;
+    margin: 45px auto 58px auto;
+    color: #01353E;
+}
+
+#all-inclusive{
+    width: 216px;
+}
+
+#standart{
+    width: 145px;
+}
+
+#pro{
+    width: 100px;
+    height: 40px;
+}
+
+#first{
+    margin: 137px 153px 45px 153px;
+}
+
+.clean-list{
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+    gap: 20px;
+}
+
+
+li{
+    margin: 0 0 20px 31px;
+    color: #242121;
+}
+
+li:last-of-type{
+    margin-bottom: 0;
+}
+
+.price-number{
+    font-size: 36px;
+    font-weight: bold;
+    color: #01353E;
+}
+
+.price-symbol{
+    font-size: 18px;
+    color: #01353E;
+}
+

@@ -1,0 +1,131 @@
+@import "fonts.css";
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+}
+
+.content {
+  background-color: #fff;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.form-container {
+  padding: 46px 79px 8px 79px;
+  width: 100%;
+  max-width: 780px;
+  background-color: #F1F0ED;
+  position: relative;
+}
+
+.form-container__form-group {
+  margin-top: 43px;
+}
+
+.form-container__title {
+  font: 700 30px/1 "Montserrat", sans-serif;
+}
+
+.form-container__cancel {
+  position: absolute;
+  right: 20px;
+  top: 22px;
+  cursor: pointer;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.form-item input, .form-item textarea {
+  background: transparent;
+  border-bottom: 1px solid #DAD6CE;
+  font: 500 15px/1 "Montserrat", sans-serif;
+}
+
+.checkbox-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 52px;
+  position: relative;
+}
+
+.checkbox-link {
+  color: #000;
+  text-decoration-color: #E5481D;
+  white-space: nowrap;
+}
+
+.title-item {
+  font: 500 17px/1 "Montserrat", sans-serif;
+  margin-bottom: 10px;
+}
+
+.checkbox-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  order: 2;
+  font: 600 17px/24px "Montserrat", sans-serif;
+  position: relative;
+  padding-left: 31px;
+}
+
+.checkbox-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 21px;
+  height: 15px;
+  background: url(../img/img-4.svg) center/contain no-repeat;
+}
+
+.checkbox-title::after {
+  content: "";
+  display: none;
+  position: absolute;
+  width: 11px;
+  height: 18px;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(../img/img-3.svg) center/contain no-repeat;
+}
+
+.custom-checkbox {
+  display: none;
+}
+
+.custom-checkbox:checked + .checkbox-title::after {
+  display: inline-block;
+}
+
+.submit-button {
+  width: 249px;
+  height: 49px;
+  background: url(../img/img-2.svg) center/contain no-repeat;
+  order: 3;
+  color: #aaa9a6;
+  font: 700 14px/1 "Montserrat", sans-serif;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.submit-button.active {
+  color: #E5481D;
+}

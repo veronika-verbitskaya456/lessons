@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Form</title>
+  </head>
+  <body>
+    <section class="content">
+      <div class="form-container">
+        <h2 class="form-container__title">Нужна помощь с подбором</h2>
+        <button class="form-container__cancel">
+          <img src="img/img-1.svg" alt="cancel">
+        </button>
+        <form action="#" class="form-container__form-group">
+          <div class="form-item">
+            <label for="user-name" class="title-item">Ф.И.О.*</label>
+            <input type="text" id="user-name" name="user-name" required>
+          </div>
+          <div class="form-item">
+            <label for="user-email" class="title-item">Электронная почта*</label>
+            <input type="email" id="user-email" name="user-email" required>
+          </div>
+          <div class="form-item">
+            <label for="user-phone" class="title-item">Контактный телефон*</label>
+            <input type="tel" id="user-phone" pattern="\+?[0-9\s\-\(\)]{10,}" name="user-phone" required>
+          </div>
+          <div class="form-item">
+            <label for="user-comment" class="title-item">Комментарий</label>
+            <textarea id="user-comment" name="user-comment"></textarea>
+          </div>
+          <div class="form-item checkbox-item">
+            <input type="checkbox" id="user-approve" class="custom-checkbox" onchange="activateButton()">
+            <label for="user-approve" class="title-item checkbox-title">
+              <span class="checkbox-text">я соглашаюсь с условиями</span>
+              <a href="#" class="checkbox-link">политики конфеденциальности</a>
+            </label>
+            <button type="submit" class="submit-button" id="submit-button" disabled>ОТПРАВИТЬ</button>
+          </div>
+        </form>
+      </div>
+      <img src="img/img-5.svg" alt="form-footer">
+    </section>
+    <script>
+      function activateButton() {
+        const checkbox = document.getElementById('user-approve');
+        const button = document.getElementById('submit-button');
+        if (checkbox.checked) {
+          button.disabled = false;
+          button.classList.add('active');
+        } else {
+          button.disabled = true;
+          button.classList.remove('active');
+        }
+      }
+    </script>
+  </body>
+</html>

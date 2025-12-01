@@ -56,9 +56,16 @@ outline: 0;
 .checkbox-item {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
   gap: 52px;
   position: relative;
+}
+
+.checkbox-link {
+  color: #000;
+  text-decoration-color: #E5481D;
+  white-space: nowrap;
 }
 
 .title-item {
@@ -68,23 +75,24 @@ outline: 0;
 
 .checkbox-title {
   display: flex;
-  align-items: center;
-  cursor: pointer;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
-  align-self: center;
   order: 2;
   font: 600 17px/24px "Montserrat", sans-serif;
   position: relative;
+  padding-left: 31px;
 }
 
 .checkbox-title::before {
   content: "";
-  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 21px;
   height: 15px;
   background: url(../img/img-4.svg) center/contain no-repeat;
-  margin-right: 10px;
-  flex-shrink: 0;
 }
 
 .checkbox-title::after {
@@ -94,10 +102,9 @@ outline: 0;
   width: 11px;
   height: 18px;
   left: 5px;
-  top: 24px;
+  top: 50%;
+  transform: translateY(-50%);
   background: url(../img/img-3.svg) center/contain no-repeat;
-  margin-right: 10px;
-  flex-shrink: 0;
 }
 
 .custom-checkbox {

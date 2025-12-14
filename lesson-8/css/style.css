@@ -1,0 +1,252 @@
+@import "fonts.css";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.link, .lawyer-question {
+  text-decoration: none;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #222;
+  width: 100%;
+}
+
+.footer__hat {
+  display: flex;
+  padding: 80px calc(50% - 660px) 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__contact {
+  display: flex;
+  gap: 141px;
+  padding: 0 calc(50% - 660px);
+  margin-top: 96px;
+  position: relative;
+}
+
+.footer__contact::before {
+  content: "";
+  width: 100%;
+  max-width: 1320px;
+  height: 1px;
+  background-color: #8C8C8C;
+  position: absolute;
+  top: -48px;
+}
+
+.hat__title {
+  font: 900 18px/1.5 "Nunito Sans", sans-serif;
+  text-transform: uppercase;
+  color: #4F8FF0;
+}
+
+.hat__title .info {
+  display: block;
+  color: #FFF;
+  font: 900 20px/1.5 "Nunito Sans", sans-serif;
+  text-transform: lowercase;
+}
+
+.hat__info {
+  font: 400 16px/1.2 "Nunito Sans", sans-serif;
+  color: #FFF;
+  max-width: 862px;
+}
+
+.item-contact {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.item-contact__img {
+  width: 55px;
+}
+
+.contact__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item-contact__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-contact__title {
+  font: 700 12px/1.2 "Nunito Sans", sans-serif;
+  text-transform: uppercase;
+  color: #8C8C8C;
+}
+
+.item-contact__info {
+  font: 700 16px/1.5 "Nunito Sans", sans-serif;
+  color: #FFF;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.navigation__link {
+  font: 700 14px/1.2 "Nunito Sans", sans-serif;
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.navigation__link:hover {
+  color: #4F8FF0;
+}
+
+.lawyer-info {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.lawyer-info__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.lawyer-info__photo {
+  width: 65px;
+}
+
+.lawyer-info__name {
+  font: 700 20px/1.5 "Nunito Sans", sans-serif;
+  color: #FFF;
+}
+
+.lawyer-info__profession {
+  font: 300 14px/1.2 "Nunito Sans", sans-serif;
+  color: #FFF;
+}
+
+.lawyer-agitation {
+  font: 400 14px/1.5 "Nunito Sans", sans-serif;
+  color: #FFF;
+  margin: 16px 0 24px;
+  max-width: 424px;
+}
+
+.lawyer-question {
+  display: inline-block;
+  font: 900 14px/1.2 "Nunito Sans", sans-serif;
+  color: #FFF;
+  text-transform: uppercase;
+  background-color: #4F8FF0;
+  padding: 16px 24px;
+  border: 2px solid #4F8FF0;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px calc(50% - 660px);
+  background-color: #181818;
+  width: 100%;
+  margin-top: 84px;
+}
+
+.copyright__info {
+  font: 400 14px/1.2 "Nunito Sans", sans-serif;
+  color: #FFF;
+}
+
+@media (max-width: 834px), (max-width: 390px) {
+  .hat__info,
+  .navigation {
+    display: none;
+  }
+}
+
+@media (max-width: 834px) {
+  .footer__hat {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 60px calc(50% - 347px) 0;
+  }
+
+  .footer__contact {
+    padding: 0 calc(50% - 347px);
+    gap: 26px;
+    justify-content: space-between;
+  }
+
+  .footer__contact::before {
+    max-width: 695px;
+  }
+
+  .item-contact__title {
+    font-size: 12px;
+  }
+
+  .item-contact__info {
+    font-size: 14px;
+    max-width: 274px;
+    width: 100%;
+  }
+
+  .footer__copyright {
+    padding: 16px calc(50% - 347px);
+    margin-top: 60px;
+  }
+
+  .contact__lawyer {
+    max-width: 334px;
+  }
+}
+
+@media (max-width: 390px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer__hat {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px calc(50% - 138px) 0;
+  }
+
+  .footer__contact {
+    flex-direction: column;
+    padding: 0 calc(50% - 167px);
+    gap: 40px;
+    margin-top: 48px;
+  }
+
+  .footer__contact::before {
+    max-width: 342px;
+    top: -24px;
+  }
+
+  .footer__copyright {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px calc(50% - 162px);
+    margin-top: 40px;
+  }
+
+  .contact__lawyer {
+    max-width: 334px;
+  }
+}
